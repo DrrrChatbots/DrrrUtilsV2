@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "DrrrUtilsV2",
+    "description": "Durarara ChatRoom Utility V2",
+    "short_name": "DrrrUtilsV2",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://drrr.com/room/*"],
+            "run_at": "document_start",
+            "js": ["/js/jquery-3.4.1.min.js", "DrrrUtils.js"]
+        }
+    ],
+    "permissions": ["*://drrr.com/*"]
+}
